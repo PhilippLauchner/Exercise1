@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * 
  */
@@ -8,11 +10,19 @@
  */
 public class HelloWorld {
 
+	private static Scanner scanner;
+
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Hello ASE2015 - how are you? :)");
-	}
+	    scanner = new Scanner(System.in);
 
+		System.out.println("Hello ASE2015 - how are you now? :)");
+		System.out.println("Please enter your name: ");
+		
+		String userName = scanner.next();
+		HelloUser hello = new HelloUser(userName);
+		hello.greetUser();
+	}
 }
